@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Index</th>
+        <th scope="col">Girth</th>
+        <th scope="col">Height</th>
+        <th scope="col">Volume</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for city in cities %}
+    <tr>
+        <td><a href="view/{{tree.id}}">{{ city.fldIndex }}</a></td>
+        <td>{{ tree.fldGirth }}</td>
+        <td>{{ tree.fldHeight }}</td>
+        <td>{{ tree.fldVolume }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
